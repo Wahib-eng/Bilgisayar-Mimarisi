@@ -105,40 +105,51 @@ function parca(dizi, boyut) {
 	return parcalar;
 }
 
-function flip (veri ){
-
-  hamData
-
-  var rand = Math.random()*veri.length;
-  if(veri[rand]== 0 ){
-     veri[rand] == 1; 
-  }
-  else {
-    veri[rand] == 0 ; 
-  }
-  return veri;
-}
-
 function yanlisiDuzelt(){
  
-  veriler = document.getElementById("hamData").value;
-  uzunluk = verielr.length ; 
+  veriler = document.getElementById("hamData").value; 
+  var  uzunluk = veriler.length ; 
   
-  rand = Math.floor(Math.random ()*uzunluk)+0;
-  console.log(rand);
-
-  if(data[rand] == 1 ){
-    alert("q")
-    veriler[rand] = 0 ; 
+  if(uzunluk == 7 ){
+    data =veriler[2]+veriler[4]+veriler[5]+veriler[6];
+    parity = veriler[0]+ veriler[1] +veriler[3];  
+  }
+  else if (uzunluk == 12 ){
+     data = veriler[2]+veriler[4]+veriler[5]+veriler[6]+veriler[8]+veriler[9]+veriler[10]+veriler[11]; 
+     parity = veriler[0]+ veriler[1] +veriler[3]+veriler[7];  
+  }
+  else if (uzunluk == 21){
+    data = veriler[2]+veriler[4]+veriler[5]+veriler[6]+veriler[8]+veriler[9]+veriler[10]+veriler[11]+veriler[12]+veriler[13]+veriler[14]
+    +veriler[16]+veriler[17]+veriler[18]+veriler[19]+veriler[20];
+    parity = veriler[0]+ veriler[1] +veriler[3]+ veriler[7]+veriler[15];  
   }
   else {
-    veriler[rand] = 1 ; 
+    alert("gelen veri uzerine ekleyemezsiniz !! "); 
   }
 
-  console.log("random value : "+ veriler[rand]);  
-  document.getElementById("dv").value=veriler  ;
+  dataStr = data.toString(); 
+  var eskiData = hamming(dataStr);  
 
   for(var i =0 ; i<veriler.length; i++){
-    console.log(veriler[i]);
+    if(veriler[i] != eskiData[i]){
+
+       veriler[i] = 2; 
+      }
+
+    }
+    
+    console.log(eskiData+"\n" +veriler);
+  
+      if(veriler == eskiData){
+        alert("Yanlis veri bulunmadi  ");
+        document.getElementById("yv").value="";
+     
+    }
+    else {
+      document.getElementById("yv").value = veriler;
+      document.getElementById("dv").value = eskiData;
+    }
+    
+    
   }
-}
+ 
