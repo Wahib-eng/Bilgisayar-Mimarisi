@@ -1,17 +1,16 @@
 body
 {
-    
-    background-color: rgb(255, 255, 255);
+  
+    background-image: url("paper.gif");
     font-family:'Courier New', Courier, monospace, cursive ; 
     margin: 80px;
     
 }
 h1
 {
-    font-size: 45px;
     color: rgba(8,8,60);
-    margin-left: 130px;
-    
+    margin: 40px;
+    font-size: 45px;
 }
 h2
 {
@@ -19,9 +18,11 @@ h2
     text-align: left;
     color: rgb(8, 8, 60);
     border:rgba(13, 4, 66, 0.692) 2px SOLID;
-     border-style: dashed;
-     margin: 80px;
-     padding: 80px;
+    border-style: dashed;
+    margin: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 80px;
 
 }
 .veri ,.hamData,.HataliVeri, .dorguVeri,.yanlisVeri
