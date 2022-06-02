@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hamming Code 4,8,16</title>
+    <link rel="stylesheet" href="hammingCode.css">
+</head>
+<body>
+    
+    <marquee direction="right" behavior="alternate"  style="border:rgba(13, 4, 66, 0.692) 2px SOLID; border-style: dashed;" >  
+        <h1> Hamming Code simulator</h1> </marquee> <br><br><br><br>
+    <h2 >
+        Veri Ekle :
+        <input class="veri" id="veri" name="data" type="text" value="" ><br><br> 
+
+        
+        <input class="four" id="four" name="4" type="radio" value="4">
+        <label  for="four">4</label>
+        <input class="eight" id="eight" name="4" type="radio" value="8"> 
+        <label  for="eight">8</label>
+        <input class="sixteen" id="sixteen" name="4" type="radio" value="16"> 
+        <label for="sixteen">16</label><br><br> 
+        <input class="submit" id="submit" type="submit" onclick="hesapla()" value="onayla"> <br><br>
+        
+        Parity Bits : 
+        <input class="hamData" id="parity"  value="">   <br><br>
+        Veri Bitleri  : <input class="HataliVeri" id="gelenVeri"><br><br>
+        Hamming Veri :
+        <input class="hamData" id="hamData"  value="">  &#160  <br><br> Bir tane bit değistir <br><br>
+        <input class="submit" name="Ok" type="button" onclick="yanlisiDuzelt()" value="hatayı yakla" > <br><br>
+        Yanlış Veri :  <input class="yanlisVeri" id="yv"><br><br>
+        Doğru Veri :  <input class="dorguVeri" id="dv">
+    </h2> 
+</body>
+<script src="hammingCode.js"></script>
+</html>

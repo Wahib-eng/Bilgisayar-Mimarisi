@@ -1,0 +1,59 @@
+body
+{
+    
+    background-color: rgb(255, 255, 255);
+    font-family:'Courier New', Courier, monospace, cursive ; 
+    margin: 80px;
+    
+}
+h1
+{
+    font-size: 45px;
+    color: rgba(8,8,60);
+    margin-left: 130px;
+    
+}
+h2
+{
+
+    text-align: left;
+    color: rgb(8, 8, 60);
+    border:rgba(13, 4, 66, 0.692) 2px SOLID;
+     border-style: dashed;
+     margin: 80px;
+     padding: 80px;
+
+}
+.veri ,.hamData,.HataliVeri, .dorguVeri,.yanlisVeri
+{
+   
+    font-family: 'Courier New', Courier, monospace, cursive;
+    background-color: rgb(255, 251, 250, 0.726);
+    width: 400; 
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid rgb(8, 8, 60);
+    border-radius: 10%;
+}
+.veri:hover ,.hamData:hover ,.HataliVeri:hover, .dorguVeri:hover,.yanlisVeri:hover {
+    background-color: rgba(5, 0, 0, 0.144);
+
+}
+.submit
+{
+    font-family: 'Courier New', Courier, monospace, cursive;
+    background-color: rgb(8, 8, 60);
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid rgb(250, 247, 247);
+    border-radius: 10%;
+    cursor:pointer;
+}
+.submit:hover
+{
+    background-color: rgb(12, 166, 238);
+    transition: 0.5s;
+}
