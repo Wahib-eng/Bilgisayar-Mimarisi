@@ -1,9 +1,15 @@
+ var hamkodu = [];
+  var parity=[];
+  var data = []; 
+
+  var parityIndx  =[];  
+  
 function hesapla() {
-  var veriler =[]; 
-  var x = document.getElementById("veri").value;
-  veriler.push(x) ; 
- 
-  if(veriler.length==0){
+   var x = document.getElementById("veri").value;
+   
+   data = x ; 
+   var uzunluk = x.length ;
+  if(uzunluk==0){
     alert("Veri giriniz !! ");
   }
   else if ( x.match(/[^10]/)) {
@@ -12,45 +18,103 @@ function hesapla() {
   
   else {
     if (document.getElementById("four").checked) {
-      if (x.length != 4) {
+      if (uzunluk != 4) {
         alert("Girilen bitlerin sayisi 4 olmalidir !!");
       } else {
-        veriler=hamming(x); 
-        document.getElementById("hamData").value = veriler;
-        parity = veriler[0]+ veriler[1] +veriler[3];  
-        data = veriler[2]+veriler[4]+veriler[5]+veriler[6]; 
-        document.getElementById("gelenVeri").value=data;
-        document.getElementById("parity").value = (parity);
+         
+        parity[2] = data[3] ^ data[2] ^ data[0] ; 
+        parity[1] = data[3] ^ data[1] ^ data[0] ;
+        parity[0] = data[2] ^ data[1] ^ data[0] ;
 
-       
+         hamkodu [6] = parity[2];
+         hamkodu [5] = parity[1];
+         hamkodu [4] = data[3];
+         hamkodu [3] = parity[0];
+         hamkodu [2] =data[2];
+         hamkodu [1] = data[1];
+         hamkodu [0]= data[0]; 
+
+         document.getElementById("parity").value = parity;
+         document.getElementById("gelenVeri").value=data;
+         document.getElementById("parity").style.color="#FF0000";
+         document.getElementById("gelenVeri").style.color="#017D4C";
+
+         document.getElementById("hamData").value=hamkodu;
+
+         
 
       }
     } else if (document.getElementById("eight").checked) {
-      if (x.length != 8) {
-        alert("Girilen bitler 8 bit olmalidir !!");
+      if (uzunluk != 8) {
+        alert(" Girilen bitler 8 bit olmalidir !!");
       } else {
-        veriler=hamming(x); 
-        document.getElementById("hamData").value = veriler;
-        parity = veriler[0]+ veriler[1] +veriler[3]+veriler[7];  
-        data = veriler[2]+veriler[4]+veriler[5]+veriler[6]+veriler[8]+veriler[9]+veriler[10]+veriler[11]; 
-        document.getElementById("gelenVeri").value=data;
-        document.getElementById("parity").value = (parity);
+        
+        
+        parity[3] = data[7] ^ data[6] ^ data[4] ^ data[3] ^ data[1] ; 
+        parity[2] = data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[1]  ;
+        parity[1] =  data[6] ^ data[5] ^ data[4] ^ data[0] ;
+        parity[0] = data[3] ^ data[2] ^ data[1] ^ data[0];
+         
+         hamkodu [11] = parity[3];
+         hamkodu [10] = parity[2];
+         hamkodu [9] = data[7];
+         hamkodu [8] = parity[1];
+         hamkodu [7] =data[6];
+         hamkodu [6] = data[5];
+         hamkodu [5] = data[4];
+         hamkodu [4] = parity[0];
+         hamkodu [3] = data[3];
+         hamkodu [2] =data[2];
+         hamkodu [1] = data[1];
+         hamkodu [0]= data[0]; 
 
-
+         document.getElementById("parity").value = parity;
+         document.getElementById("gelenVeri").value=data;
+         document.getElementById("parity").style.color="#FF0000";
+         document.getElementById("gelenVeri").style.color="#017D4C";
+         document.getElementById("hamData").value=hamkodu;
 
       }
     } else if (document.getElementById("sixteen").checked) {
-      if (x.length != 16) {
+      if (uzunluk != 16) {
         alert("Girilen bitler 16 olmalidir !!");
       } else {
-        
-        veriler=hamming(x); 
-        document.getElementById("hamData").value = veriler;
-        parity = veriler[0]+ veriler[1] +veriler[3]+ veriler[7]+veriler[15];  
-        data = veriler[2]+veriler[4]+veriler[5]+veriler[6]+veriler[8]+veriler[9]+veriler[10]+veriler[11]+veriler[12]+veriler[13]+veriler[14]
-       +veriler[16]+veriler[17]+veriler[18]+veriler[19]+veriler[20]; 
-        document.getElementById("gelenVeri").value=data;
+        parity[4] = data[15] ^ data[14] ^ data[12] ^ data[11] ^ data[9] ^ data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[0] ; 
+        parity[3] = data[15] ^ data[13] ^ data[12] ^ data[10] ^ data[9] ^ data[6] ^ data[5] ^ data[3] ^ data[2]; 
+        parity[2] = data[14] ^ data[13] ^ data[12] ^data[8] ^ data[7]^ data[6] ^ data[5] ^ data[1] ^ data[0] ;
+        parity[1] =  data[11] ^ data[10] ^ data[9] ^data[8]^ data[7]^ data[6] ^ data[5] ;
+        parity[0] = data[4] ^ data[3] ^ data[2] ^ data[1] ^ data[0];
+
+
+         hamkodu [20] = parity[4];
+         hamkodu [19] = parity[3];
+         hamkodu [18] = data[15];
+         hamkodu [17] = parity[2];
+         hamkodu [16] =data[14];
+         hamkodu [15] = data[13];
+         hamkodu[14] = data[12];
+         hamkodu [13] = parity[1];
+         hamkodu [12] = data[11];
+         hamkodu [11] = data[10];
+         hamkodu [10] =data[9];
+         hamkodu [9] = data[8];
+         hamkodu [8] = data[7];
+         hamkodu [7] =data[6];
+         hamkodu [6] = data[5];
+         hamkodu [5] = parity[0] ;
+         hamkodu [4] = data[4];
+         hamkodu [3] = data[3];
+         hamkodu [2] =data[2];
+         hamkodu [1] = data[1];
+         hamkodu [0]= data[0]; 
+      
         document.getElementById("parity").value = parity;
+        document.getElementById("gelenVeri").value=data;
+        document.getElementById("parity").style.color="#FF0000";
+        document.getElementById("gelenVeri").style.color="#017D4C";
+        document.getElementById("hamData").value=hamkodu;
+        
+       
       }
     } else {
       alert("Choose the bit's length !! ");
@@ -58,98 +122,25 @@ function hesapla() {
   }
 }
 
-function hamming(x) {
-	
-
-	var veri = x;
-	var parityBitIndex = [];
-	var r = x.length;
-	var i = 1;
-	var  j,  temp, check;
-
-	while (r / i >= 1) {
-		parityBitIndex.push(i);
-		i *= 2;
-	}
-
-	for (j = 0; j < parityBitIndex.length; j++) {
-		anhtar = parityBitIndex[j];
-		dizi = veri.slice(anhtar - 1).split('');
-		temp = parca(dizi, anhtar);
-		check = (temp.reduce(function (onceki, ondeki, indeks) {
-			if (!(indeks % 2)) {
-				onceki = onceki.concat(ondeki);
-			}
-			return onceki;
-		}, []).reduce(function (onceki, ondeki) 
-    {
-       return +onceki + +ondeki
-       }, 0) % 2) ? 1 : 0;
-		veri = veri.slice(0, anhtar - 1) + check + veri.slice(anhtar - 1);
-		if (j + 1 === parityBitIndex.length && veri.length / (anhtar * 2) >= 1) {
-			parityBitIndex.push(anhtar * 2);
-		}
-	}
-  console.log(veri);
-
-	return veri;
-}
-
-function parca(dizi, boyut) {
-	var parcalar = [],
-	i = 0,
-	n = dizi.length;
-	while (i < n) {
-		parcalar.push(dizi.slice(i, i += boyut));
-	}
-	return parcalar;
-}
-
 function yanlisiDuzelt(){
- 
-  veriler = document.getElementById("hamData").value; 
-  var  uzunluk = veriler.length ; 
+   var diziKontrol=[];
+   var parity1 =[]
+   diziKontrol=document.getElementById("hamData").value;
   
-  if(uzunluk == 7 ){
-    data =veriler[2]+veriler[4]+veriler[5]+veriler[6];
-    parity = veriler[0]+ veriler[1] +veriler[3];  
-  }
-  else if (uzunluk == 12 ){
-     data = veriler[2]+veriler[4]+veriler[5]+veriler[6]+veriler[8]+veriler[9]+veriler[10]+veriler[11]; 
-     parity = veriler[0]+ veriler[1] +veriler[3]+veriler[7];  
-  }
-  else if (uzunluk == 21){
-    data = veriler[2]+veriler[4]+veriler[5]+veriler[6]+veriler[8]+veriler[9]+veriler[10]+veriler[11]+veriler[12]+veriler[13]+veriler[14]
-    +veriler[16]+veriler[17]+veriler[18]+veriler[19]+veriler[20];
-    parity = veriler[0]+ veriler[1] +veriler[3]+ veriler[7]+veriler[15];  
-  }
-  else {
-    alert("gelen veri uzerine ekleyemezsiniz !! "); 
-  }
 
-  dataStr = data.toString(); 
-  var eskiData = hamming(dataStr);  
-
-  for(var i =0 ; i<veriler.length; i++){
-    if(veriler[i] != eskiData[i]){
-
-       veriler[i] = 2; 
-      }
-
-    }
+   if(diziKontrol == hamkodu ){
     
-    console.log(eskiData+"\n" +veriler);
+      alert("Bir tane bit degistiriniz !! ")
+      
+   }
+   
+   
+   else {
+    
+    document.getElementById("bp").value=parity1;
+    document.getElementById("dv").value = hamkodu ; 
+    document.getElementById("yv").value = diziKontrol;
   
-      if(veriler == eskiData){
-        alert("Yanlis veri bulunmadi  ");
-        document.getElementById("yv").value="";
-     
-    }
-    else {
-      document.getElementById("yv").value = veriler;
-      document.getElementById("dv").value = eskiData;
-    }
+   }
     
-    
-  }
- 
+  } 
