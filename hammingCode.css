@@ -1,7 +1,7 @@
 body
 {
   
-    background-image: url("paper.gif");
+    
     font-family:'Courier New', Courier, monospace, cursive ; 
     margin: 80px;
     
@@ -55,6 +55,6 @@ h2
 }
 .submit:hover
 {
-    background-color: rgb(12, 166, 238);
+    background-color: rgba(21, 8, 141, 0.76);
     transition: 0.5s;
 }
