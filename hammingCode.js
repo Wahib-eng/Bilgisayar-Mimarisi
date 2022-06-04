@@ -136,8 +136,6 @@ function yanlisiDuzelt(){
    
    
    else {
-    
-    document.getElementById("bp").value=parity1;
     document.getElementById("dv").value = hamkodu ; 
     document.getElementById("yv").value = diziKontrol;
   
