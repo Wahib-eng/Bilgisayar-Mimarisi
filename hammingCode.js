@@ -123,7 +123,7 @@ function hesapla() {
        
       }
     } else {
-      alert("Choose the bit's length !! ");
+      alert("Veri'nin uzunluğu giriniz !!! ");
     }
   }
 }
