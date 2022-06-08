@@ -41,9 +41,10 @@ function hesapla() {
          document.getElementById("gelenVeri").value=data;
          document.getElementById("parity").style.color="#FF0000";
          document.getElementById("gelenVeri").style.color="#017D4C";
-         
+         hamkodu= hamkodu.toString(); 
+        
          document.getElementById("hamData").value=hamkodu;
-
+         hamkodu = hamkodu.replace(/,/g,'') ;
          
 
       }
