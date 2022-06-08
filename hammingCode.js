@@ -23,9 +23,7 @@ function hesapla() {
         alert("Girilen bitlerin sayisi 4 olmalidir !!");
       } else {
        
-        document.getElementById("parity").value = " ";
-        document.getElementById("gelenVeri").value=" " ;
-        document.getElementById("hamData").value=" ";
+      
          
         parity[2] = data[3] ^ data[2] ^ data[0] ; 
         parity[1] = data[3] ^ data[1] ^ data[0] ;
@@ -43,8 +41,7 @@ function hesapla() {
          document.getElementById("gelenVeri").value=data;
          document.getElementById("parity").style.color="#FF0000";
          document.getElementById("gelenVeri").style.color="#017D4C";
-         hamkodu= hamkodu.toString(); 
-         hamkodu = hamkodu.replace(/,/g,'') ;
+         
          document.getElementById("hamData").value=hamkodu;
 
          
@@ -54,10 +51,7 @@ function hesapla() {
       if (uzunluk != 8) {
         alert(" Girilen bitler 8 bit olmalidir !!");
       } else {
-        document.getElementById("parity").value = " ";
-        document.getElementById("gelenVeri").value=" " ;
-        document.getElementById("hamData").value=" ";
-         
+       
         
         parity[3] = data[7] ^ data[6] ^ data[4] ^ data[3] ^ data[1] ; 
         parity[2] = data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[1]  ;
@@ -90,9 +84,7 @@ function hesapla() {
       if (uzunluk != 16) {
         alert("Girilen bitler 16 olmalidir !!");
       } else {
-       document.getElementById("parity").value = " ";
-       document.getElementById("gelenVeri").value=" " ;
-       document.getElementById("hamData").value=" ";
+      
 
        parity[4] = data[15] ^ data[14] ^ data[12] ^ data[11] ^ data[9] ^ data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[0] ; 
        parity[3] = data[15] ^ data[13] ^ data[12] ^ data[10] ^ data[9] ^ data[6] ^ data[5] ^ data[3] ^ data[2]; 
