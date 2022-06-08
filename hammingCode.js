@@ -22,6 +22,10 @@ function hesapla() {
       if (uzunluk != 4) {
         alert("Girilen bitlerin sayisi 4 olmalidir !!");
       } else {
+       
+        document.getElementById("parity").value = " ";
+        document.getElementById("gelenVeri").value=" " ;
+        document.getElementById("hamData").value=" ";
          
         parity[2] = data[3] ^ data[2] ^ data[0] ; 
         parity[1] = data[3] ^ data[1] ^ data[0] ;
