@@ -54,25 +54,28 @@ function hesapla() {
       if (uzunluk != 8) {
         alert(" Girilen bitler 8 bit olmalidir !!");
       } else {
-        
+        document.getElementById("parity").value = " ";
+        document.getElementById("gelenVeri").value=" " ;
+        document.getElementById("hamData").value=" ";
+         
         
         parity[3] = data[7] ^ data[6] ^ data[4] ^ data[3] ^ data[1] ; 
         parity[2] = data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[1]  ;
         parity[1] =  data[6] ^ data[5] ^ data[4] ^ data[0] ;
         parity[0] = data[3] ^ data[2] ^ data[1] ^ data[0];
          
-         hamkodu [11] = parity[3];
-         hamkodu [10] = parity[2];
-         hamkodu [9] = data[7];
-         hamkodu [8] = parity[1];
-         hamkodu [7] =data[6];
-         hamkodu [6] = data[5];
-         hamkodu [5] = data[4];
-         hamkodu [4] = parity[0];
-         hamkodu [3] = data[3];
-         hamkodu [2] =data[2];
-         hamkodu [1] = data[1];
-         hamkodu [0]= data[0]; 
+        hamkodu [11] = parity[3];
+        hamkodu [10] = parity[2];
+        hamkodu [9] = data[7];
+        hamkodu [8] = parity[1];
+        hamkodu [7] =data[6];
+        hamkodu [6] = data[5];
+        hamkodu [5] = data[4];
+        hamkodu [4] = parity[0];
+        hamkodu [3] = data[3];
+        hamkodu [2] =data[2];
+        hamkodu [1] = data[1];
+        hamkodu [0]= data[0]; 
 
          document.getElementById("parity").value = parity;
          document.getElementById("gelenVeri").value=data;
@@ -87,34 +90,38 @@ function hesapla() {
       if (uzunluk != 16) {
         alert("Girilen bitler 16 olmalidir !!");
       } else {
-        parity[4] = data[15] ^ data[14] ^ data[12] ^ data[11] ^ data[9] ^ data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[0] ; 
-        parity[3] = data[15] ^ data[13] ^ data[12] ^ data[10] ^ data[9] ^ data[6] ^ data[5] ^ data[3] ^ data[2]; 
-        parity[2] = data[14] ^ data[13] ^ data[12] ^data[8] ^ data[7]^ data[6] ^ data[5] ^ data[1] ^ data[0] ;
-        parity[1] =  data[11] ^ data[10] ^ data[9] ^data[8]^ data[7]^ data[6] ^ data[5] ;
-        parity[0] = data[4] ^ data[3] ^ data[2] ^ data[1] ^ data[0];
+       document.getElementById("parity").value = " ";
+       document.getElementById("gelenVeri").value=" " ;
+       document.getElementById("hamData").value=" ";
+
+       parity[4] = data[15] ^ data[14] ^ data[12] ^ data[11] ^ data[9] ^ data[7] ^ data[5] ^ data[4] ^ data[2] ^ data[0] ; 
+       parity[3] = data[15] ^ data[13] ^ data[12] ^ data[10] ^ data[9] ^ data[6] ^ data[5] ^ data[3] ^ data[2]; 
+       parity[2] = data[14] ^ data[13] ^ data[12] ^data[8] ^ data[7]^ data[6] ^ data[5] ^ data[1] ^ data[0] ;
+       parity[1] =  data[11] ^ data[10] ^ data[9] ^data[8]^ data[7]^ data[6] ^ data[5] ;
+       parity[0] = data[4] ^ data[3] ^ data[2] ^ data[1] ^ data[0];
 
 
-         hamkodu [20] = parity[4];
-         hamkodu [19] = parity[3];
-         hamkodu [18] = data[15];
-         hamkodu [17] = parity[2];
-         hamkodu [16] =data[14];
-         hamkodu [15] = data[13];
-         hamkodu[14] = data[12];
-         hamkodu [13] = parity[1];
-         hamkodu [12] = data[11];
-         hamkodu [11] = data[10];
-         hamkodu [10] =data[9];
-         hamkodu [9] = data[8];
-         hamkodu [8] = data[7];
-         hamkodu [7] =data[6];
-         hamkodu [6] = data[5];
-         hamkodu [5] = parity[0] ;
-         hamkodu [4] = data[4];
-         hamkodu [3] = data[3];
-         hamkodu [2] =data[2];
-         hamkodu [1] = data[1];
-         hamkodu [0]= data[0]; 
+       hamkodu [20] = parity[4];
+       hamkodu [19] = parity[3];
+       hamkodu [18] = data[15];
+       hamkodu [17] = parity[2];
+       hamkodu [16] =data[14];
+       hamkodu [15] = data[13];
+       hamkodu[14] = data[12];
+       hamkodu [13] = parity[1];
+       hamkodu [12] = data[11];
+       hamkodu [11] = data[10];
+       hamkodu [10] =data[9];
+       hamkodu [9] = data[8];
+       hamkodu [8] = data[7];
+       hamkodu [7] =data[6];
+       hamkodu [6] = data[5];
+       hamkodu [5] = parity[0] ;
+       hamkodu [4] = data[4];
+       hamkodu [3] = data[3];
+       hamkodu [2] =data[2];
+       hamkodu [1] = data[1];
+       hamkodu [0]= data[0]; 
       
         document.getElementById("parity").value = parity;
         document.getElementById("gelenVeri").value=data;
