@@ -42,9 +42,9 @@ function hesapla() {
          document.getElementById("parity").style.color="#FF0000";
          document.getElementById("gelenVeri").style.color="#017D4C";
          hamkodu= hamkodu.toString(); 
-        
+        hamkodu = hamkodu.replace(/,/g,'') ;
          document.getElementById("hamData").value=hamkodu;
-         hamkodu = hamkodu.replace(/,/g,'') ;
+         
          
 
       }
