@@ -1,6 +1,5 @@
 # Bilgisayar-Mimarisi
 
-![Bm Projesi](https://user-images.githubusercontent.com/75446834/171748792-04e54d33-8049-4df6-97bd-846c117a3816.png)
 
  Reach the site from : https://wahib-eng.github.io/Bilgisayar-Mimarisi/hammingCode.html
 # Hamming Code and algorithm : 
