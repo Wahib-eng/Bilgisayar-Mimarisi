@@ -1,4 +1,4 @@
-# Bilgisayar-Mimarisi
+# Hamming Code 
 
 ![bm  projesi2022-06-13 092403](https://user-images.githubusercontent.com/75446834/173292318-44331174-07af-4f00-ad5c-7b25e334a668.png)
 
